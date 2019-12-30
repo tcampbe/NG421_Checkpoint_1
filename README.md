@@ -75,7 +75,7 @@ Bonus: how could you do this without hard coding the lanes to three.
 1. Make a decision: should there be a save button and the description is only updated when the save button is clicked.
 
 ### Material Table
-Some users don't want to look the lanes. They just want to look through all the data in one place and sort and filter it. This calls for a table.
+Some users don't want to look at the lanes. They want to look through all the data in one place and sort and filter it. This calls for a table.
 
 1. Add Material to the project and set it up in the code.
 1. Add a component `TodoTable` that uses Material to show all the todos in table format with filtering and sort.
