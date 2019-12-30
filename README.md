@@ -19,6 +19,11 @@ The last person at your company who worked on this project didn't finish up. We 
 1. Add a new field `createdAt` of type Date.
 1. Use the interface in all places appropriate for TypeScript.
 
+### `services/todo.service.ts`
+1. Create a property in the todo service: `statuses`. It should be an array of strings: "Todo", "Doing", "Done". 
+1. Create a method in the todo service: `getStatuses`. It should return the array `statuses`.
+1. Change the `getTodos` method to accept an argument `status`, to only get todos with that status. Return `todoList.filter` if `status` is truthy else just return the normal array `todoList`.
+
 ### `todo-list/todo-list.component.ts`
 1. Add a class property `status` which is an @Input().
 1. We need to change the class property `todoList` to a getter property.
@@ -56,16 +61,11 @@ Bonus: how could you do this without hard coding the lanes to three.
 1. Make sure the default status of a todo is `Todo`.
 1. Make sure the default valu of `createdAt` is `new Date()`.
 
-### `services/todo.service.ts`
-1. Create a property in the todo service: `statuses`. It should be an array of strings: "Todo", "Doing", "Done". 
-1. Create a method in the todo service: `getStatuses`. It should return the array `statuses`.
-1. Change the `getTodos` method to accept an argument `status`, to only get todos with that status. Return `todoList.filter` if `status` is truthy else just return the normal array `todoList`.
-
 ### `todo/todo.component.ts`
 1. Add a class property `isEditing`.
 1. Add a `<select>` to the template. Populate its options from the values of `getStatuses` with `*ngFor`.
 1. Bind the `<select>` value to the `todo.status` with `ngModel`.
-1. Implement in place editing to allow updating the title. You decide what will trigger the editing.
+1. Implement in place editing to allow updating the title. Use `isEditing`. You decide what will trigger the editing.
 1. Add another button next to Delete for Edit. Clicking this button will open a modal `TodoEdit` that will allow a Todo's description to be edited.
 
 ### TodoEdit
