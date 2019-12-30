@@ -1,6 +1,6 @@
 ## Intro
 Over the last few weeks, you've been adding on to your todo app, rebuilding, and refactoring. For this Checkpoint, you're going to rebuild this app into a Trello app that has three lanes: Todo, Doing, and Done. We aren't going to get as fancy as being able to drag and drop (you could try this on your own). There will be a drop-down to change a todo status, which should move it to another lane. We need to be able to update the todo title. We should also be able to add a description for the todo to give more detail. There is not enough room to type the description in the todo component, so we'll need a modal with a text area.
-
+<img src="NG421Checkpoint1Demo.gif">
 ## Setup
 1. Fork, clone, npm i, npm start
 
