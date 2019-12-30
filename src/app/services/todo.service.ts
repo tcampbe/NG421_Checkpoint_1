@@ -14,11 +14,11 @@ export class TodoService {
   getTodos(){
     return this.todoList;
   }
-  deleteTodo(todo:any) {
+  deleteTodo(todo: ITodo) {
     const index = this.todoList.findIndex(todoItem => todoItem === todo);
     this.todoList.splice(index, 1);
   }
-  addTodo(todo):void {
+  addTodo(todo: ITodo):void {
     todo.id = this.todoId ++;
     todoList.push(todo);
   }
