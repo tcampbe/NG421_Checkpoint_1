@@ -4,7 +4,6 @@
   }}</label>
   <select [(ngModel)]="todo.status" name="status">
     <option *ngFor="let status of statuses"></option>
-    <form #
   </select>
   <input
     (blur)="isEditing = false"
