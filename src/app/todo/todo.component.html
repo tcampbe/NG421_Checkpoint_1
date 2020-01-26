@@ -4,14 +4,11 @@
   }}</label>
   <br />
   <select [(ngModel)]="todo.status" name="status">
-    <option *ngFor="let status of statuses"
-      >{{ status }}
-    </option>
+    <option *ngFor="let status of statuses">{{ status }} </option>
 
     <!--    <option value="Todo">Todo</option>
             <option value="Doing">Doing</option>
             <option value="Done">Done</option>-->
-
   </select>
   <input
     (blur)="isEditing = false"

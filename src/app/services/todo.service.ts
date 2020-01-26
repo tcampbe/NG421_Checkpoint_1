@@ -5,7 +5,6 @@ import { ITodo } from "../interfaces/itodo";
 })
 export class TodoService {
   todoId: number = 0;
-  statuses: string[] = ["Todo", "Doing", "Done"];
 
   todoList: ITodo[] = [
     // example of how to make an item in todo list
@@ -17,7 +16,9 @@ export class TodoService {
       description: ""
     }
   ];
-
+  status: string = "Todo";
+  statuses: string[] = ["Todo", "Doing", "Done"];
+  createdAt = new Date();
 
   constructor() {}
   getTodos(status: string) {
