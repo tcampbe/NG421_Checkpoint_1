@@ -20,6 +20,7 @@ export class TodoService {
   status: string = "Todo";
   statuses: string[] = ["Todo", "Doing", "Done"];
   createdAt = new Date();
+  editingTodo: ITodo;
 
   constructor() {}
   getTodos(status: string) {
@@ -36,6 +37,12 @@ export class TodoService {
     todo.id = this.todoId++;
     this.todoList.push(todo);
   }
+
+  editTodo(todo): ITodo {
+    this.editingTodo.description = todo.description;
+    return todo.description;
+  }
+
   getStatuses() {
     return this.statuses;
   }
