@@ -10,7 +10,9 @@ export class CreateTodoComponent implements OnInit {
   todoTitle = "";
   constructor(private todoService: TodoService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
   addTodo(): void {
     this.todoService.addTodo({
       title: this.todoTitle,
