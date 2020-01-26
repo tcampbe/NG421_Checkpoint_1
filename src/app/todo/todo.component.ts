@@ -11,20 +11,25 @@ import { ITodo } from "../interfaces/itodo";
 })
 export class TodoComponent implements OnInit {
   @Input() todo;
+
   constructor(
     private todoService: TodoService,
     private modalService: NgbModal
   ) {}
+
   todoTitle = "";
   isEditing = false;
 
   ngOnInit() {}
-  async deleteTodo(todo: ITodo) {
+
+  async deleteTodo(todo) {
     let result;
     const modal = this.modalService.open(ConfirmationModalComponent);
     modal.componentInstance.modalInstance = modal;
+
     try {
       result = await modal.result;
+
       if (result === "yes") {
         this.todoService.deleteTodo(todo);
       }

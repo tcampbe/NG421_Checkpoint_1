@@ -5,6 +5,8 @@ import { ITodo } from "../interfaces/itodo";
 })
 export class TodoService {
   todoId: number = 0;
+  statuses: string[] = ["Todo", "Doing", "Done"];
+
   todoList: ITodo[] = [
     // example of how to make an item in todo list
     {
@@ -15,12 +17,12 @@ export class TodoService {
       description: ""
     }
   ];
-  statuses: string[] = ["Todo", "Doing", "Done"];
+
 
   constructor() {}
   getTodos(status: string) {
-    if(!status){
-      return this.todoList
+    if (!status) {
+      return this.todoList;
     }
     return this.todoList.filter(todo => todo.status === status);
   }
