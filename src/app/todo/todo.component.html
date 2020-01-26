@@ -1,6 +1,23 @@
 <div class="view">
-    <label>{{todo.title}}</label>
-    <div class="float-right">
-        <button type="button" (click)= deleteTodo(todo) class="btn btn-danger btn-sm">Delete</button>
-    </div>
+  <label *ngIf="!isEditing" (dblclick)="isEditing = true">{{
+    todo.title
+  }}</label>
+  <select [(ngModel)]="todo.status" name="status">
+    <option *ngFor="let status of statuses"></option>
+    <form #
+  </select>
+  <input
+    (blur)="isEditing = false"
+    *ngIf="isEditing"
+    [(ngModel)]="todo.title"
+  />
+  <div class="float-right">
+    <button
+      type="button"
+      (click)="deleteTodo(todo)"
+      class="btn btn-danger btn-sm"
+    >
+      Delete
+    </button>
+  </div>
 </div>
