@@ -16,7 +16,7 @@ Todo Board
 Todo Table
 </button>
 <br><br>
-<app-create-todo ></app-create-todo>
+<app-create-todo *ngIf="todoToggle == 0"></app-create-todo>
 <br><br>
 <app-board *ngIf="todoToggle == 0"></app-board>
 <br><br>
