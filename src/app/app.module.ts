@@ -11,9 +11,8 @@ import { RouterModule, Routes } from "@angular/router";
 import { BoardComponent } from "./board/board.component";
 import { TodoEditComponent } from "./todo-edit/todo-edit.component";
 import { TodoTableComponent } from './todo-table/todo-table.component';
-/* import{MatTableModule} from '@angular/material/table';
-import {MatSortModule} from '@angular/material';
- */
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const routes = [];
 const appRoutes = RouterModule.forRoot(routes);
 
@@ -33,10 +32,8 @@ const appRoutes = RouterModule.forRoot(routes);
     BrowserModule, 
     appRoutes, 
     FormsModule, 
-    NgbModule,
-/*     MatTableModule,
-    MatSortModule
- */  
+    NgbModule, 
+    BrowserAnimationsModule
   ],
 
   providers: [],
