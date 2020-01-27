@@ -24,14 +24,25 @@ const appRoutes = RouterModule.forRoot(routes);
     BoardComponent,
     TodoEditComponent
   ],
+
   imports: [
     BrowserModule,
     appRoutes,
     FormsModule,
     NgbModule
   ],
+
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [ConfirmationModalComponent] 
+
+  bootstrap: [
+    AppComponent
+  ],
+
+  entryComponents: [
+    ConfirmationModalComponent,
+    TodoEditComponent
+  ] 
+
 })
+
 export class AppModule { }

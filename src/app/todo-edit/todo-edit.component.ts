@@ -13,15 +13,17 @@ export class TodoEditComponent implements OnInit {
 
   constructor() {}
 
-  editTodo: ITodo;
-
+/*   editTodo: ITodo;
+ */
   ngOnInit() {}
 
   yes() {
     this.modalInstance.close("yes");
   }
-  edit(description) {
+
+/*   edit(description) {
     this.editTodo.description = description;
     this.yes();
   }
+ */  
 }
