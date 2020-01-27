@@ -8,6 +8,7 @@ import { ActivatedRoute, RouterOutlet } from "@angular/router";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
+  todoToggle=0;
   title = "Todos";
   ngOnInit() {}
 }

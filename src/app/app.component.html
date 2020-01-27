@@ -1,5 +1,29 @@
 <h1 align="center">Troy's Todo List</h1>
-<app-create-todo></app-create-todo>
-<app-board></app-board>
+<button 
+    (click)="todoToggle = 0"
+    type="submit"
+    name="submit"
+    value="save"
+>
+Todo Board
+</button>
+<button 
+    (click)="todoToggle = 1"
+    type="submit"
+    name="submit"
+    value="save"
+>
+Todo Table
+</button>
+<br><br>
+<app-create-todo ></app-create-todo>
+<br><br>
+<app-board *ngIf="todoToggle == 0"></app-board>
+<br><br>
+<app-todo-table *ngIf="todoToggle == 1"></app-todo-table>
+
 
 <router-outlet></router-outlet>
+
+<!-- *ngIf="todoToggle == 0"
+ -->
