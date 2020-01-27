@@ -8,11 +8,11 @@ import { TodoService } from "../services/todo.service";
 })
 export class CreateTodoComponent implements OnInit {
   todoTitle = "";
+
   constructor(private todoService: TodoService) {}
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
+
   addTodo(): void {
     this.todoService.addTodo({
       title: this.todoTitle,
@@ -24,4 +24,5 @@ export class CreateTodoComponent implements OnInit {
     // resets our todoTitle variable to an empty string
     this.todoTitle = "";
   }
+  
 }

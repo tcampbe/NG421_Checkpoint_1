@@ -17,33 +17,53 @@ export class TodoService {
       description: ""
     }
   ];
-  status: string = "Todo";
+  
   statuses: string[] = ["Todo", "Doing", "Done"];
-  createdAt = new Date();
   editingTodo: ITodo;
+  /*   status: string = "Todo";
+  createdAt = new Date();
+  */
 
+  /*   TODO_DATA: ITodo[] = this.todoList;
+  */
   constructor() {}
+
+  addTodo(todo: ITodo): void {
+    todo.id = this.todoId++;
+    this.todoList.push(todo);
+  }
+  
   getTodos(status: string) {
     if (!status) {
       return this.todoList;
     }
     return this.todoList.filter(todo => todo.status === status);
   }
-  deleteTodo(todo: ITodo) {
-    const index = this.todoList.findIndex(todoItem => todoItem === todo);
-    this.todoList.splice(index, 1);
-  }
-  addTodo(todo: ITodo): void {
-    todo.id = this.todoId++;
-    this.todoList.push(todo);
+
+  editTodo(todo: ITodo) {
+/* need to find the todo
+ */    
+    const index = this.todoList.findIndex(todoItem => 
+      todoItem === todo);
+/* need to replace the todo      
+ */    
+    this.todoList.splice(index, 1, this.editingTodo);
+/* or
+ */    
+    this.editingTodo.description = todo.description
+    return todo.description;
+/*     or something else
+ */
   }
 
-  editTodo(todo): ITodo {
-    this.editingTodo.description = todo.description;
-    return todo.description;
+  deleteTodo(todo: ITodo) {
+    const index = this.todoList.findIndex(todoItem => 
+      todoItem === todo);
+    this.todoList.splice(index, 1);
   }
 
   getStatuses() {
     return this.statuses;
   }
+
 }
