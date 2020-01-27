@@ -26,6 +26,9 @@ export class TodoService {
 
   /*   TODO_DATA: ITodo[] = this.todoList;
   */
+
+  todos: ITodo[] = this.todoList;
+
   constructor() {}
 
   addTodo(todo: ITodo): void {
