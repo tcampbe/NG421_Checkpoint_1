@@ -9,8 +9,6 @@ import { ITodo } from "../interfaces/itodo";
 })
 
 export class TodoEditComponent implements OnInit {
-  @Input() todo;
-  
   modalInstance: NgbModalRef;
 
   constructor() {}
