@@ -45,8 +45,8 @@ export class TodoComponent implements OnInit {
       result = await modal.result;
 
       if (result === "yes") {
-        this.todoService.editTodo(todo);
-      }
+/*         this.todoService.editTodo(todo);
+ */      }
     } catch (ex) {}
   }
 }
