@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
 import { ITodo } from "../interfaces/itodo";
 
@@ -9,6 +9,8 @@ import { ITodo } from "../interfaces/itodo";
 })
 
 export class TodoEditComponent implements OnInit {
+  @Input() todo;
+  
   modalInstance: NgbModalRef;
 
   constructor() {}
