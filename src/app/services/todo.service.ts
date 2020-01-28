@@ -43,22 +43,13 @@ export class TodoService {
     return this.todoList.filter(todo => todo.status === status);
   }
 
-  editTodo(todo: ITodo) {
-/* need to find the todo
- */    
+/*   editTodo(todo: ITodo) {
     const index = this.todoList.findIndex(todoItem => 
       todoItem === todo);
-/* need to replace the todo      
- */    
     this.todoList.splice(index, 1, this.editingTodo);
-/* or
- */    
-    this.editingTodo.description = todo.description
     return todo.description;
-/*     or something else
- */
   }
-
+ */
   deleteTodo(todo: ITodo) {
     const index = this.todoList.findIndex(todoItem => 
       todoItem === todo);
