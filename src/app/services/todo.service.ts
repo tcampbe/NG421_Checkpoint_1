@@ -42,14 +42,7 @@ export class TodoService {
     }
     return this.todoList.filter(todo => todo.status === status);
   }
-
-/*   editTodo(todo: ITodo) {
-    const index = this.todoList.findIndex(todoItem => 
-      todoItem === todo);
-    this.todoList.splice(index, 1, this.editingTodo);
-    return todo.description;
-  }
- */
+  
   deleteTodo(todo: ITodo) {
     const index = this.todoList.findIndex(todoItem => 
       todoItem === todo);
