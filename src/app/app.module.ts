@@ -10,13 +10,19 @@ import { ConfirmationModalComponent } from "./confirmation-modal/confirmation-mo
 import { RouterModule, Routes } from "@angular/router";
 import { BoardComponent } from "./board/board.component";
 import { TodoEditComponent } from "./todo-edit/todo-edit.component";
-import { TodoTableComponent } from './todo-table/todo-table.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import{MatTableModule} from '@angular/material/table';
-import {MatSortModule} from '@angular/material';
+import { TodoTableComponent } from "./todo-table/todo-table.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTableModule, MatTable } from "@angular/material/table";
+import { MatSortModule } from "@angular/material";
 
-
-const routes = [];
+const routes = [
+  {
+    path: '',component:BoardComponent
+  },
+  {
+    path: 'table', component: TodoTableComponent
+  }
+];
 const appRoutes = RouterModule.forRoot(routes);
 
 @NgModule({
@@ -32,10 +38,10 @@ const appRoutes = RouterModule.forRoot(routes);
   ],
 
   imports: [
-    BrowserModule, 
-    appRoutes, 
-    FormsModule, 
-    NgbModule, 
+    BrowserModule,
+    appRoutes,
+    FormsModule,
+    NgbModule,
     BrowserAnimationsModule,
     MatTableModule,
     MatSortModule
@@ -43,15 +49,8 @@ const appRoutes = RouterModule.forRoot(routes);
 
   providers: [],
 
-  bootstrap: [
-    AppComponent
-  ],
+  bootstrap: [AppComponent],
 
-  entryComponents: [
-    ConfirmationModalComponent, 
-    TodoEditComponent
-  ]
-
+  entryComponents: [ConfirmationModalComponent, TodoEditComponent]
 })
-
 export class AppModule {}
