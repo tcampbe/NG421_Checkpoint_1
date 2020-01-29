@@ -3,5 +3,5 @@ export interface ITodo {
     title: string;
     status: string;
     createdAt: Date;
-    description: string;
+    description?: string;
   }
