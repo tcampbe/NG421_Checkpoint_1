@@ -9,6 +9,7 @@ import { ITodo } from "../interfaces/itodo";
 })
 
 export class TodoEditComponent implements OnInit {
+  newDescription: string;
   modalInstance: NgbModalRef;
 
   constructor() {}
@@ -16,7 +17,9 @@ export class TodoEditComponent implements OnInit {
   ngOnInit() {}
 
   yes() {
-    this.modalInstance.close("yes");
+    this.modalInstance.close(this.newDescription);
+    debugger;
+
   }
 
 }
